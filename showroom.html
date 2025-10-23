@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Showroom - Manchy Automobile</title>
+  <meta name="description" content="Browse our extensive collection of luxury and quality vehicles. Find your perfect car from our inventory of premium brands.">
+  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="/styles/showroom.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <a href="/"><img src="/images/Manchy-Logo2962.PNG" alt="Manchy Automobile Logo"></a>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/showroom.html" class="active">Car Showroom</a></li>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/staff.html">Our Team</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="showroom-main">
+    <section class="showroom-hero">
+      <div class="container">
+        <h1>Our Car Collection</h1>
+        <p>Discover your perfect vehicle from our premium selection</p>
+      </div>
+    </section>
+
+    <section class="filters-section">
+      <div class="container">
+        <div class="filters-container">
+          <h2>Filter Vehicles</h2>
+          <div class="filters-grid">
+            <div class="filter-group">
+              <label for="makeFilter">Make</label>
+              <select id="makeFilter">
+                <option value="">All Makes</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="modelFilter">Model</label>
+              <select id="modelFilter">
+                <option value="">All Models</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="yearFilter">Year</label>
+              <select id="yearFilter">
+                <option value="">All Years</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="conditionFilter">Condition</label>
+              <select id="conditionFilter">
+                <option value="">All Conditions</option>
+                <option value="New">New</option>
+                <option value="Foreign Used">Foreign Used</option>
+                <option value="Nigerian Used">Nigerian Used</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="minPrice">Min Price (₦)</label>
+              <input type="number" id="minPrice" placeholder="0">
+            </div>
+            <div class="filter-group">
+              <label for="maxPrice">Max Price (₦)</label>
+              <input type="number" id="maxPrice" placeholder="Any">
+            </div>
+            <div class="filter-group">
+              <label for="maxMileage">Max Mileage (km)</label>
+              <input type="number" id="maxMileage" placeholder="Any">
+            </div>
+            <div class="filter-actions">
+              <button id="resetFilters" class="btn btn-secondary">Reset Filters</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cars-section">
+      <div class="container">
+        <div class="results-header">
+          <h2>Available Vehicles</h2>
+          <p id="resultsCount">Loading...</p>
+        </div>
+        <div id="carsGrid" class="cars-grid">
+          <div class="loading">Loading vehicles...</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>📞 07076470444 (MTN)</p>
+        <p>📞 08055887437 (GLO)</p>
+        <p>✉️ manchyautomobile@gmail.com</p>
+      </div>
+      <div class="footer-section">
+        <h3>Business Hours</h3>
+        <p>Monday - Saturday</p>
+        <p>9:00 AM - 6:00 PM</p>
+        <p>Sunday: Closed</p>
+      </div>
+      <div class="footer-section">
+        <h3>Location</h3>
+        <p>New Akala Express Way</p>
+        <p>Beside Pinnacle Filling Station</p>
+        <p>New Garage, Ibadan</p>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="https://instagram.com/manchy_automobile_ltd" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://tiktok.com/@manchy_autos" target="_blank" rel="noopener">TikTok</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Manchy Automobile Ltd. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button class="chat-button" aria-label="Live chat">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+    </svg>
+  </button>
+
+  <div class="chat-widget" id="chatWidget">
+    <div class="chat-header">
+      <h3>Chat with Us</h3>
+      <button class="chat-close" id="chatClose">&times;</button>
+    </div>
+    <div class="chat-body">
+      <p>Hello! How can we help you today?</p>
+      <p>Contact us:</p>
+      <p><strong>WhatsApp:</strong> 07076470444</p>
+      <p><strong>Call:</strong> 08055887437</p>
+      <p><strong>Email:</strong> manchyautomobile@gmail.com</p>
+    </div>
+  </div>
+
+  <div id="carModal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script type="module" src="/js/showroom.js"></script>
+</body>
+</html>

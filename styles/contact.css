@@ -1,0 +1,142 @@
+.contact-main {
+  padding-top: 80px;
+  background: var(--gray-light);
+  min-height: 100vh;
+}
+
+.contact-hero {
+  background: var(--black);
+  color: var(--white);
+  padding: var(--spacing-xxl) var(--spacing-md);
+  text-align: center;
+}
+
+.contact-hero h1 {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--gold);
+}
+
+.contact-hero p {
+  font-size: 1.2rem;
+}
+
+.contact-content {
+  padding: var(--spacing-xxl) 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-xxl);
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.info-card {
+  background: var(--white);
+  padding: var(--spacing-lg);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.info-card h3 {
+  font-size: 1.3rem;
+  color: var(--black);
+  margin-bottom: var(--spacing-sm);
+}
+
+.info-card p {
+  line-height: 1.8;
+  color: var(--gray-dark);
+  margin-bottom: var(--spacing-xs);
+}
+
+.info-card a {
+  color: var(--gold);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.info-card a:hover {
+  color: #c9a22e;
+}
+
+.contact-map {
+  background: var(--white);
+  padding: var(--spacing-lg);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.contact-map h3 {
+  font-size: 1.5rem;
+  color: var(--black);
+  margin-bottom: var(--spacing-md);
+}
+
+.map-container {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: var(--spacing-sm);
+}
+
+.map-note {
+  color: var(--gray-dark);
+  font-size: 0.95rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.visit-us {
+  background: var(--white);
+  padding: var(--spacing-xl);
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.visit-us h2 {
+  font-size: 2rem;
+  color: var(--black);
+  margin-bottom: var(--spacing-md);
+}
+
+.visit-us p {
+  line-height: 1.8;
+  color: var(--gray-dark);
+  margin-bottom: var(--spacing-lg);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.visit-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .contact-hero h1 {
+    font-size: 2rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .visit-buttons {
+    flex-direction: column;
+  }
+
+  .visit-buttons .btn {
+    width: 100%;
+  }
+}
