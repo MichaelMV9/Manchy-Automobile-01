@@ -11,6 +11,7 @@ const minPrice = document.getElementById('minPrice');
 const maxPrice = document.getElementById('maxPrice');
 const maxMileage = document.getElementById('maxMileage');
 const resetFilters = document.getElementById('resetFilters');
+const searchButton = document.getElementById('searchButton');
 const carsGrid = document.getElementById('carsGrid');
 const resultsCount = document.getElementById('resultsCount');
 const carModal = document.getElementById('carModal');
@@ -321,13 +322,7 @@ async function initializePayment(carId) {
 
 window.initializePayment = initializePayment;
 
-makeFilter.addEventListener('change', applyFilters);
-modelFilter.addEventListener('change', applyFilters);
-yearFilter.addEventListener('change', applyFilters);
-conditionFilter.addEventListener('change', applyFilters);
-minPrice.addEventListener('input', applyFilters);
-maxPrice.addEventListener('input', applyFilters);
-maxMileage.addEventListener('input', applyFilters);
+searchButton.addEventListener('click', applyFilters);
 
 resetFilters.addEventListener('click', () => {
   makeFilter.value = '';
@@ -337,7 +332,8 @@ resetFilters.addEventListener('click', () => {
   minPrice.value = '';
   maxPrice.value = '';
   maxMileage.value = '';
-  applyFilters();
+  filteredCars = [...allCars];
+  displayCars();
 });
 
 loadCars();

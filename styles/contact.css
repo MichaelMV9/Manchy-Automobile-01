@@ -5,20 +5,45 @@
 }
 
 .contact-hero {
-  background: var(--black);
+  background: linear-gradient(135deg, var(--black) 0%, var(--gray-dark) 100%);
   color: var(--white);
   padding: var(--spacing-xxl) var(--spacing-md);
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 .contact-hero h1 {
   font-size: 3rem;
   margin-bottom: var(--spacing-sm);
   color: var(--gold);
+  text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 0.8s ease;
 }
 
 .contact-hero p {
   font-size: 1.2rem;
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 0.8s ease 0.2s backwards;
 }
 
 .contact-content {
